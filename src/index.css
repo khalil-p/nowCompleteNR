@@ -1,0 +1,21 @@
+@font-face {
+    font-family: 'Proxima Nova Extra Condensed';
+    src: url('./assets/Proxima-Nova-Extra-Condensed/Demo_Fonts/Fontspring-DEMO-proximanovaexcn-regularit.otf') format('opentype');
+    /* You can add more font formats for better browser compatibility */
+  }
+
+  @font-face {
+    font-family: 'Proxima Nova Semi Bold';
+    src: url('./assets/Proxima-Nova-Extra-Condensed/Demo_Fonts/Fontspring-DEMO-proximanova-semibold.otf') format('opentype');
+    /* You can add more font formats for better browser compatibility */
+  }
+
+  .proxima-regular {
+    font-family: 'Proxima Nova Extra Condensed', sans-serif;
+  }
+  .proxima-semi-bold {
+    font-family: 'Proxima Nova Semi Bold', sans-serif;
+  }
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
