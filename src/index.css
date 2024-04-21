@@ -5,8 +5,29 @@
   }
 
   @font-face {
+    font-family: 'Proxima Nova Con Bold';
+    src: url('./assets/proxima-nova-condensed-cufonfonts/Mark_Simonson_Proxima_Nova_Condensed_Bold_TheFontsMaster.com.otf') format('opentype');
+    /* You can add more font formats for better browser compatibility */
+  }
+
+  
+  @font-face {
     font-family: 'Proxima Nova Semi Bold';
     src: url('./assets/Proxima-Nova-Extra-Condensed/Demo_Fonts/Fontspring-DEMO-proximanova-semibold.otf') format('opentype');
+    /* You can add more font formats for better browser compatibility */
+  }
+  .proxima_nova_con_bold {
+    font-family: 'Proxima Nova Con Bold', sans-serif;
+  }
+
+  @font-face {
+    font-family: 'Basis Grotesque Pro Medium';
+    src: url('./assets/basis-grotesque-pro/BasisGrotesqueArabicPro-Medium.ttf') format('truetype');
+    /* You can add more font formats for better browser compatibility */
+  }
+  @font-face {
+    font-family: 'Basis Grotesque Pro Regular';
+    src: url('./assets/basis-grotesque-pro/BasisGrotesqueArabicPro-Regular.ttf') format('truetype');
     /* You can add more font formats for better browser compatibility */
   }
 
@@ -16,6 +37,22 @@
   .proxima-semi-bold {
     font-family: 'Proxima Nova Semi Bold', sans-serif;
   }
+  .proxima-cond-black {
+    font-family: 'Proxima Nova Cond Black', sans-serif;
+  }
+  .basis-grotesque-pro-medium {
+    font-family: 'Basis Grotesque Pro Medium', sans-serif;
+  }
+  .basis-grotesque-pro-regular {
+    font-family: 'Basis Grotesque Pro Regular', sans-serif;
+  }
+
+  /* colors */
+  /* cusines and locations */
+  .color-cl {
+    color:   rgba(2, 6, 12, 0.6);
+  }
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
