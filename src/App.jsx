@@ -41,14 +41,16 @@ const Header = () => {
     </>
   );
 };
-// linear-gradient(rgba(27, 30, 36, 0) 0%, rgb(27, 30, 36) 84.21%)
-const ResCard = ({ resData }) => {
+
+const ResCard = (props) => {
+ const {resData} = props
+  const {cloudinaryImageId,name,sla,cuisines,areaName,avgRating} = resData
   return (
     <>
-      <div className="w-[calc(100%-920px)] hover:scale-90 cursor-pointer transition-all">
+      <div className="hover:scale-90 cursor-pointer transition-all">
         <div className="relative rounded-2xl overflow-hidden">
           <img
-            src={`https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/${resData.info.cloudinaryImageId}`}
+            src={`https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/${cloudinaryImageId}`}
             alt="res_img"
             className=" object-cover w-[100%] h-[calc(150px)]"
           />
@@ -66,17 +68,17 @@ const ResCard = ({ resData }) => {
         </div>
         <div className="resInfo">
           <div className="basis-grotesque-pro-medium text-lg">
-            {resData.info.name}
+            {name}
           </div>
           <div className="basis-grotesque-pro-medium text-base flex items-center gap-1">
-            <MdStars size={20} color="green" /> {resData.info.avgRating} •{" "}
-            {resData.info.sla.slaString}
+            <MdStars size={20} color="green" /> {avgRating} •{" "}
+            {sla.slaString}
           </div>
           <div className="cusines basis-grotesque-pro-regular text-base color-cl">
-            {resData.info.cuisines.join(", ")}
+            {cuisines.join(", ")}
           </div>
           <div className="basis-grotesque-pro-regular text-base color-cl">
-            {resData.info.areaName}
+            {areaName}
           </div>
         </div>
       </div>
@@ -88,9 +90,11 @@ function App() {
     <>
       <div className="py-5 px-20">
         <Header />
-        <div className="flex flex-wrap justify-between gap-y-7">
+        <div className="grid grid-cols-3 gap-4">
           {resList.map((i) => {
-            return <ResCard resData={i} />;
+                console.log(i.info);
+            return <ResCard key={i.info.id} resData={i?.info} />;
+        
           })}
         </div>
       </div>
@@ -99,3 +103,4 @@ function App() {
 }
 
 export default App;
+
