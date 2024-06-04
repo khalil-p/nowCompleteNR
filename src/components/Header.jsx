@@ -6,12 +6,19 @@ import { IoHelpBuoyOutline } from "react-icons/io5";
 import { FaSignInAlt } from "react-icons/fa";
 import { FaCartShopping } from "react-icons/fa6";
 import { Input } from "antd";
-const Header = () => {
+// import Btn  from "./Buttons/Btn.jsx";
+export const Header = () => {
+  // const handleTopRatedRestro = (e) => {
+        
+  // }
   return (
     <>
       <nav className="flex items-center w-full justify-between mb-10 proxima-semi-bold text-base">
         <div className="w-8">
           <img src={swiggyLogo} alt="logo" />
+        </div>
+        <div className="ml-5">
+        {/* <Btn btnTxt = "Top Rated Restaurant" onclick={handleTopRatedRestro}/> */}
         </div>
         <div className="container text-right">
           <ul className="flex justify-end gap-x-20 items-center ">
