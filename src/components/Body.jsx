@@ -12,7 +12,6 @@ function Body() {
     setResFilterFlag(true);
   };
   const handleShowAllRestro = (e) => {
-    console.log("resFilterFlag....", resFilterFlag);
     if (resFilterFlag) {
       setResToBeDisplayed(resList);
     }
